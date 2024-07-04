@@ -31,6 +31,8 @@ addEventListener("DOMContentLoaded", async e => {
         labelItems.textContent = `Total (${cantidadItems} items)`;
         precioSpan.textContent = `$${totalProducts.toFixed(2)}`;
         subTotalSpan.textContent = precioSpan.textContent;
+
+        localStorage.setItem('cartQuantity', cantidadItems.toString());
         
         minusButton.addEventListener('click', e=>{
             console.log('minusButton clicked');
